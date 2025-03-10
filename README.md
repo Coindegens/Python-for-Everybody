@@ -42,13 +42,6 @@ Solutions for the "Python for Everybody" specialization by University of Michiga
 - `beautifulsoup/beautifulsoup02.py` - Advanced web scraping
 - Assignment Link: https://www.py4e.com/tools/python-data/?PHPSESSID=5ff775af6cf819ed03c177018929b9a0
 
-### Course Information
-- Platform: Coursera
-- Institution: University of Michigan
-- Course: Using Python to Access Web Data
-- Part of: Python for Everybody Specialization
-- Course Website: https://www.py4e.com/
-
 ### Repository Structure
 ```
 Python-for-Everybody/
