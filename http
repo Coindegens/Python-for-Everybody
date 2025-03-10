@@ -1,0 +1,30 @@
+import socket
+
+def get_http_headers():
+    # Create socket
+    mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    
+    try:
+        # Connect to server
+        mysock.connect(('data.pr4e.org', 80))
+        
+        # Create HTTP GET request
+        cmd = 'GET http://data.pr4e.org/intro-short.txt HTTP/1.0\r\n\r\n'
+        cmd = cmd.encode()
+        mysock.send(cmd)
+
+        # Receive and process data
+        while True:
+            data = mysock.recv(512)
+            if len(data) < 1:
+                break
+            print(data.decode())
+    
+    except Exception as e:
+        print(f"Error: {str(e)}")
+    
+    finally:
+        mysock.close()
+
+if __name__ == "__main__":
+    get_http_headers()

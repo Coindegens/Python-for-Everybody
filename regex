@@ -1,0 +1,20 @@
+import re  # Uncomment this line
+
+# Program to sum numbers found in a text file using regex
+def sum_numbers(fname):
+    try:
+        with open(fname, 'r') as file:
+            content = file.read()
+            numbers = re.findall('[0-9]+', content)
+            total = sum(int(num) for num in numbers)
+            print(f"Found {len(numbers)} values")
+            print(f"Sum: {total}")
+    except FileNotFoundError:
+        print(f"Error: File '{fname}' not found")
+    except Exception as e:
+        print(f"Error: {str(e)}")
+
+# Get input and run
+if __name__ == "__main__":
+    fname = input("Enter file name: ")
+    sum_numbers(fname)
