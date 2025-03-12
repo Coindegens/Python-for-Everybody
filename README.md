@@ -2,7 +2,7 @@
 
 Solutions for the "Python for Everybody" specialization by University of Michigan on Coursera.
 
-## Using Python to Access Web Data
+## Module: Using Python to Access Web Data
 
 ### Directory Structure
 - `xml/` - XML parsing exercises
